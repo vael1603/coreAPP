@@ -1,7 +1,6 @@
 {
-    "home": {
-      "title": "Welcome",
-      "description": "This is your base app."
-    }
+  "authTr": {
+    "signIn": "Sign In"
   }
+}
   
