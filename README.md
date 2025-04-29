@@ -1,6 +1,5 @@
 ### TODO ##
-- agregar shared module e importar modules mas usados
-- agregar Lazy lodaing dentro de featureModule (usando load children en app-routing.module.ts)
+- Agregar Tailwind 3.4
 
 ### config ###
 Para clonar a partir de este proyecyo ejecutar:
