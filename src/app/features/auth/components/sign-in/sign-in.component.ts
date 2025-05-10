@@ -1,14 +1,12 @@
-import { MatButtonModule } from '@angular/material/button';
 import { Component, inject, OnInit } from '@angular/core';
 import { SharedModule } from '../../../../shared/shared.module';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { TranslocoModule } from '@ngneat/transloco';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
-  imports: [SharedModule, MatFormFieldModule, MatInputModule, TranslocoModule, MatButtonModule],
+  imports: [SharedModule, TranslocoModule, RouterModule],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.scss',
 })

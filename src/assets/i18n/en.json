@@ -1,6 +1,14 @@
 {
+  "appNameTr": "CoreApp",
   "authTr": {
-    "signIn": "Sign In"
+    "signInYourAccount": "Sign in to your account",
+    "yourEmail": "Your email",
+    "yourPassword": "Your password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signUpText": "Don't have an account?"
   }
 }
   
