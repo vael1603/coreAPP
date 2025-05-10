@@ -8,7 +8,8 @@
     "forgotPassword": "Forgot password?",
     "signIn": "Sign in",
     "signUp": "Sign up",
-    "signUpText": "Don't have an account?"
+    "signUpText": "Don't have an account?",
+    "emailPlacehoder": "user@domain.com"
   }
 }
   
