@@ -1,5 +1,5 @@
 ### TODO ##
-- Agregar Tailwind 3.4
+ -crear temas claros y oscuros con tailwind
 
 ### config ###
 Para clonar a partir de este proyecyo ejecutar:

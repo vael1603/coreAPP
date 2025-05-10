@@ -1,0 +1,12 @@
+<div class="square-bg-container">
+    <div class="front-squares grid-container">
+        <div *ngFor="let square of squares"
+            class="square"
+            [ngStyle]="{
+                animationDelay: square.delay + 's',
+                backgroundColor: square.color,
+            }">
+        </div>
+    </div>
+  </div>
+  

@@ -1,16 +1,24 @@
 :host {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-  }
-  
-  .gradient-bg {
-    width: 100%;
-    height: 100%;
-    @apply absolute inset-0 w-full h-full pointer-events-none transition-all ease-in-out duration-200;
-  }
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.gradient-bg {
+  z-index: -1;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  @apply absolute inset-0 w-full h-full pointer-events-none transition-all ease-in-out duration-200;
+}
+ 
+.color-opacity-bg {
+  width: 100%;
+  height: 100%;
+  @apply absolute w-full h-full;
+  background-color: rgba($color: #000, $alpha: 0.7);
+}
