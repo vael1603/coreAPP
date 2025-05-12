@@ -1,8 +1,8 @@
 <section class="signin-container">
-    <span class="app-title">
+    <h1 class="app-title">
         <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
         {{'appNameTr' | transloco }}
-    </span>
+    </h1>
     <div class="box-container">
         <div class="box-padding">
             <h1>{{ 'authTr.signInYourAccount' | transloco }}</h1>
@@ -32,7 +32,7 @@
                 <button type="submit" class="w-full">{{'authTr.signIn' | transloco }}</button>
                 <p class="text-sm">
                     {{'authTr.signUpText' | transloco }}
-                    <a [routerLink]="['/routePath']" routerLinkActive="router-link-active">
+                    <a [routerLink]="['/auth/signup']" routerLinkActive="router-link-active">
                         {{'authTr.signUp' | transloco}}
                     </a>
                 </p>

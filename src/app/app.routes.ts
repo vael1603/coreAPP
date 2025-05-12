@@ -15,4 +15,13 @@ export const routes: Routes = [
         (m) => m.SignInComponent,
       ),
   },
+
+  {
+    path: 'auth/signup',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('./features/auth/components/sign-up/sign-up.component').then(
+        (m) => m.SignUpComponent,
+      ),
+  },
 ];

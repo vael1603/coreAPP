@@ -1,5 +1,7 @@
-.language-button{
+.theme-button{
     position: absolute;
+    top: 0;
+    left: 0;
     margin: 1rem;
     padding-right: 5px;
 
@@ -12,6 +14,5 @@
         font-size: 1.4rem;
         padding: 5px;
     }
-
-    @apply top-0 right-0 focus:outline-none focus:ring-4 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2;
+    @apply focus:outline-none focus:ring-4 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2;
 }

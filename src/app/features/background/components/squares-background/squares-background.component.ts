@@ -12,15 +12,20 @@ export class SquaresBackgroundComponent {
 
 
   squares = Array.from({ length: 24 }, () => ({
-    size: Math.floor(Math.random() * 100) + '%', // 10px a 30px
-    delay: parseFloat((Math.random() * 10).toFixed(2)), // 0s a 5s
-    color: this.generateRandomGray()
+    delay: parseFloat((Math.random() * 10).toFixed(2)),
+    darkcolor: this.generateRandomGray(),
+    color: this.generateRandomBlue(),
   }));
 
 
   generateRandomGray() {
     const gray = Math.floor(Math.random() * 256);
     return `rgb(${gray}, ${gray}, ${gray})`;
+  }
+
+  generateRandomBlue() {
+    const gray = Math.floor(Math.random() * 256);
+    return `rgb(${gray}, ${gray}, 255)`;
   }
 
 }
