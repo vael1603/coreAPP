@@ -11,59 +11,68 @@ body {
 }
 
 :root {
-    --grey-900: #111827;
-    --grey-800: #1f2937;
-    --grey-700: #374151;
-    --gray-600: #4b5563;
-    --grey-500: #6b7280;
-    --grey-400: #9ca3af;
-    --grey-300: #d1d5db;
-    --grey-50: #f9fafb;
 
-    --blue-700: #1d4ed8;
-    --blue-600: #2563eb;
-    --blue-500: #3b82f6;
-    --blue-300: #93c5fd;
   }
   
   
   :root, [data-theme='dark'] {
     --main-color:var(--blue-600);
-    --main-bg-color:var(--grey-900);
+    --main-bg-color:var(--gray-900);
     --main-text-color: #ffffff;
-    --border-color: var(--grey-600);
+    --border-color: var(--gray-600);
     --border-color-focus: var(--blue-500);
-    --bg-input-color: var(--grey-700);
-    --placeholder-color: var(--grey-400);
+    --bg-input-color: var(--gray-700);
+    --placeholder-color: var(--gray-400);
     --btn-bg-color: var(--blue-600);
     --btn-bg-color-hover: var(--blue-700);
-    --p-color: var(--grey-300);
+    --p-color: var(--gray-300);
     --a-color: var(--blue-500);
     --main-bg-glass-color: rgba(31, 41, 55, 0.6); // gray-900 con 60% de opacidad
     --bg-opacity-color: rgba(0, 0, 0, 0.6); // gray-900 con 60% de opacidad
-
-    --btn-secondary-bg-color: var(--grey-800);
-    --btn-secondary-bg-color-hover: var(--grey-700);
+    --btn-secondary-bg-color: var(--gray-800);
+    --btn-secondary-bg-color-hover: var(--gray-700);
     --btn-secondary-bg-color-focus: var(--blue-300);
+    
+    //Snack dialog
+    --info-color: var(--blue-400);
+    --error-color: var(--red-400);
+    --success-color: var(--green-400);
+    --warn-color: var(--yellow-300);
+
+    --info-bg-color: var(--gray-700);
+    --error-bg-color: var(--gray-700);
+    --success-bg-color: var(--gray-700);
+    --warn-bg-color: var(--gray-700);
   }
   
   [data-theme='light'] {
     --main-color:var(--blue-600);
-    --main-bg-color: var(--grey-300);
-    --main-text-color: var(--grey-900); //text-gray-900 
-    --border-color: var(--grey-300);
+    --main-bg-color: var(--gray-300);
+    --main-text-color: var(--gray-900); //text-gray-900 
+    --border-color: var(--gray-300);
     --border-color-focus: var(--blue-600);
-    --bg-input-color: var(--grey-50);
-    --placeholder-color: var(--grey-400);
+    --bg-input-color: var(--gray-50);
+    --placeholder-color: var(--gray-400);
     --btn-bg-color: var(--blue-600);
     --btn-bg-color-hover: var(--blue-700);
-    --p-color: var(--grey-600);
+    --p-color: var(--gray-600);
     --a-color: var(--blue-600);
     --main-bg-glass-color: rgba(209, 213, 219, 0.6); // gray-900 con 60% de opacidad
     --bg-opacity-color: rgba(255, 255 , 255, 0.6); // gray-900 con 60% de opacidad
-    --btn-secondary-bg-color: var(--grey-300);
-    --btn-secondary-bg-color-hover: var(--grey-400);
+    --btn-secondary-bg-color: var(--gray-300);
+    --btn-secondary-bg-color-hover: var(--gray-400);
     --btn-secondary-bg-color-focus: var(--blue-300);
+    
+    //Snack dialog
+    --info-color: var(--blue-800);
+    --error-color: var(--red-800);
+    --success-color: var(--green-800);
+    --warn-color: var(--amber-600);
+    
+    --info-bg-color: var(--blue-100);
+    --error-bg-color: var(--red-100);
+    --success-bg-color: var(--green-100);
+    --warn-bg-color: var(--yellow-100);
   }
 
 
@@ -148,3 +157,5 @@ input:-webkit-autofill {
     -webkit-text-fill-color: var(--main-text-color) !important;
     
   }
+
+  

@@ -18,7 +18,6 @@ module.exports = tseslint.config(
         "error",
         {
           type: "attribute",
-          prefix: "app",
           style: "camelCase",
         },
       ],
@@ -26,10 +25,15 @@ module.exports = tseslint.config(
         "error",
         {
           type: "element",
-          prefix: "app",
           style: "kebab-case",
         },
       ],
+      "no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": "off",
+      "no-empty-function": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "no-explicit-any": "off",
     },
   },
   {

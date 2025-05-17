@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { SharedService } from '../../../../shared/shared.service';
-// import colors from 'tailwindcss/colors';
 
 @Component({
   selector: 'dynamic-background',

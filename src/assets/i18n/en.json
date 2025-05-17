@@ -2,14 +2,23 @@
   "appNameTr": "CoreApp",
   "authTr": {
     "signInYourAccount": "Sign in to your account",
+    "signUpYourAccount": "Create new account",
     "yourEmail": "Your email",
     "yourPassword": "Your password",
+    "confirmPassword": "Confirm password",
     "rememberMe": "Remember me",
     "forgotPassword": "Forgot password?",
     "signIn": "Sign in",
     "signUp": "Sign up",
     "signUpText": "Don't have an account?",
-    "emailPlacehoder": "user@domain.com"
+    "emailPlacehoder": "user@domain.com",
+    "errCharsLong": "Must be at least 8 characters long",
+    "errAtLeastUppercase": "Must contain at least one uppercase letter",
+    "errAtLeastNumber": "Must contain at least one number",
+    "errAtLeastSpecialChar": "Must contain at least one special character",
+    "name": "Name",
+    "lastname": "Lastname",
+    "passwordNotMatch": "The passwords doesn't match"
   }
 }
   

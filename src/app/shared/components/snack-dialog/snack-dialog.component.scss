@@ -1,0 +1,63 @@
+.snackbar-container{
+    height: 3.5rem;
+    padding: 0.25rem;
+    font-size: 1rem;
+    span {
+        margin-inline: 0.25rem;
+        margin-block: auto;
+
+        &.btn-action button{
+            font-size: 1rem;
+        }
+    }
+
+}
+
+.info-snack-bar{
+    background-color: var(--info-bg-color);
+    color : var(--info-color);
+    .btn-action button {
+        background-color: var(--info-color);
+        color: var(--info-bg-color);
+    }
+}
+
+.error-snack-bar {
+    background-color: var(--error-bg-color);
+    color: var(--error-color);
+    .btn-action button {
+        background-color: var(--error-color);
+        color: var(--error-bg-color);
+    }
+}
+
+.success-snack-bar {
+    background-color: var(--success-bg-color);
+    color: var(--success-color);
+    .btn-action button {
+        background-color: var(--success-color);
+        color: var(--success-bg-color);
+    }
+}
+
+.warning-snack-bar {
+    background-color: var(--warn-bg-color);
+    color: var(--warn-color);
+    .btn-action button {
+        background-color: var(--warn-color);
+        color: var(--warn-bg-color);
+    }
+}
+
+::ng-deep .mat-mdc-snack-bar-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  ::ng-deep .mdc-snackbar__surface {
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  

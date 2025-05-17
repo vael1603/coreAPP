@@ -2,14 +2,23 @@
   "appNameTr": "CoreApp",
   "authTr": {
     "signInYourAccount": "Ingresar a tu cuenta",
+    "signUpYourAccount": "Crear nueva cuenta",
     "yourEmail": "Tu correo electrónico",
     "yourPassword": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
     "rememberMe": "Recordarme",
     "forgotPassword": "¿Olvidaste tu contraseña?",
     "signIn": "Iniciar sesión",
     "signUp": "Registrarse",
     "signUpText": "¿No tienes una cuenta?",
-    "emailPlacehoder": "usuario@dominio.com"
+    "emailPlacehoder": "usuario@dominio.com",
+    "errCharsLong": "Al menos debe tener 8 caracteres",
+    "errAtLeastUppercase": "Al menos debe tener una Letra Mayúscula",
+    "errAtLeastNumber": "Al menos debe tener un número",
+    "errAtLeastSpecialChar": "Al menos debe tener un simbolo (.,!?)",
+    "name": "Nombre",
+    "lastname": "Apellido",
+    "passwordNotMatch": "Las contraseñas no coinciden"
   }
 }
   

@@ -1,4 +1,3 @@
-/* eslint-disable @angular-eslint/component-selector */
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 

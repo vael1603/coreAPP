@@ -1,19 +1,43 @@
 <section class="signup-container">
     <h1 class="app-title">
-        Sign Up
+        CoreApp
     </h1>
     <div class="box-container">
         <div class="box-padding">
-            <h1>{{ 'authTr.signInYourAccount' | transloco }}</h1>
-            <form class="space-y-4 md:space-y-6" [formGroup]="signUpForm" (ngSubmit)="onSubmit($event)">
+            <h1>{{ 'authTr.signUpYourAccount' | transloco }}</h1>
+            <form class="space-y-4 md:space-y-6" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
 
                 <div>
                     <label for="email">{{'authTr.yourEmail' | transloco }}</label>
                     <input type="email" formControlName="email" placeholder="{{'authTr.emailPlacehoder' | transloco }}">
                 </div>
+
+                <div>
+                    <label for="name">{{'authTr.name' | transloco }}</label>
+                    <input type="text" formControlName="name" placeholder="{{'authTr.name' | transloco }}">
+                </div>
+                <div>
+                    <label for="lastname">{{'authTr.lastname' | transloco }}</label>
+                    <input type="text" formControlName="lastname" placeholder="{{'authTr.lastname' | transloco }}">
+                </div>
                 <div>
                     <label for="password">{{'authTr.yourPassword' | transloco }}</label>
                     <input type="password" formControlName="password" placeholder="••••••••">
+
+                    <div class="password-conditions">
+                        <p [class]="getClassStyle('isntLongEnough')">- {{'authTr.errCharsLong' | transloco }}</p>
+                        <p [class]="getClassStyle('hasntUpperCase')">- {{'authTr.errAtLeastUppercase' | transloco }}</p>
+                        <p [class]="getClassStyle('hasntNumber')"   >- {{'authTr.errAtLeastNumber' | transloco }}</p>
+                        <p [class]="getClassStyle('hasntSpecialChar')">- {{'authTr.errAtLeastSpecialChar' | transloco }}</p>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="confirmPassword">{{'authTr.confirmPassword' | transloco }}</label>
+                    <input type="password" formControlName="confirmPassword" placeholder="••••••••">
+                    <div class="password-conditions">
+                        <p [class]="arePasswordEqual" [hidden]="this.signUpForm.get('confirmPassword')?.errors?.['required']">- {{'authTr.passwordNotMatch' | transloco }}</p>
+                    </div>
                 </div>
 
                 <button type="submit" class="w-full">{{'authTr.signIn' | transloco }}</button>
