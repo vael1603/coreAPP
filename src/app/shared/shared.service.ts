@@ -2,6 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { SnackDialogComponent } from './components/snack-dialog/snack-dialog.component';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { SnackDialogComponent } from './components/snack-dialog/snack-dialog.com
 export class SharedService {
 
   snackBar = inject(MatSnackBar);
+  translocoService = inject(TranslocoService);
 
   currentThemeSubject = new BehaviorSubject<string>(document.body.getAttribute('data-theme') || 'dark');
   currentTheme$ = this.currentThemeSubject.asObservable();
@@ -33,7 +35,7 @@ export class SharedService {
   alert(type: 'info'|'success'|'warn'|'error', msj: string) {
     this.snackBar.openFromComponent(SnackDialogComponent, { 
         data: {
-            message: msj,
+            message: this.translocoService.translate(msj), // add translation on assets/i18n
             styleclass: this.snackConfig[type].panelClass,
             type: type
         },

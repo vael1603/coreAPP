@@ -18,7 +18,9 @@
     "errAtLeastSpecialChar": "Al menos debe tener un simbolo (.,!?)",
     "name": "Nombre",
     "lastname": "Apellido",
-    "passwordNotMatch": "Las contraseñas no coinciden"
+    "passwordNotMatch": "Las contraseñas no coinciden",
+    "loginSuccess": "Ingreso exitoso",
+    "signUpSuccess": "Registration successful"
   }
 }
   

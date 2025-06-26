@@ -1,11 +1,12 @@
+import { SharedService } from './../../../../shared/shared.service';
 import { CommonModule } from '@angular/common';
 import { User } from './../../models/user';
 import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { TranslocoModule } from '@ngneat/transloco';
 import { AuthService } from '../../services/auth.service';
-import { last } from 'rxjs';
 import { passwordMatchValidator, passwordValidator } from '../../utils/passwordValidator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -16,6 +17,8 @@ import { passwordMatchValidator, passwordValidator } from '../../utils/passwordV
 export class SignUpComponent {
 
   authService = inject(AuthService);
+  SharedService = inject(SharedService);
+  router = inject(Router)
   fb = inject(FormBuilder);
 
   constructor(){
@@ -43,10 +46,13 @@ export class SignUpComponent {
       email: form.email ?? '',
       password: form.password ?? '',
       name: form.name ?? '',
-      lastName: form.name ?? '',
-    }    
+      lastname: form.lastname ?? '',
+    }
     
-    this.authService.createNewUser(user);
+    this.authService.createNewUser(user).subscribe(()=>{
+        this.SharedService.alert('success', 'authTr.signUpSuccess');
+        this.router.navigate(['/signin'])
+    });
   }
 
   getClassStyle(error: string) {

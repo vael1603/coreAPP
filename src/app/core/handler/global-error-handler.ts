@@ -18,7 +18,7 @@ export class GlobalErrorHandler implements ErrorHandler {
     } else {
         console.error('App Error:', error);
     }
-    
-    this.sharedService.alert('error', error.message)
+    const errorMessage = error?.error?.message || error.message
+    this.sharedService.alert('error', errorMessage)
   }
 }

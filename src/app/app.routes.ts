@@ -24,4 +24,13 @@ export const routes: Routes = [
         (m) => m.SignUpComponent,
       ),
   },
+  
+  {
+    path: 'home',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('./features/home/components/landing/landing.component').then(
+        (m) => m.LandingComponent,
+      ),
+  }
 ];

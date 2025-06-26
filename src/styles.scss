@@ -145,11 +145,25 @@ div.box-container{
     background-color:  var(--main-bg-glass-color);
     border-color: var(--border-color);
     @apply bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60;
-    @apply w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0;
+    @apply rounded-lg shadow dark:border md:mt-0 xl:p-0;
+    @apply sm:max-w-md;
 
     & div.box-padding{
         @apply p-6 space-y-4 md:space-y-6 sm:p-8;
     }
+}
+
+.box-container-full {
+  background-color: var(--main-bg-glass-color);
+  border-color: var(--border-color);
+  margin-inline: auto;
+  @apply bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60;
+  @apply rounded-lg shadow dark:border md:mt-0 xl:p-0;
+  @apply sm:w-[90vw] md:w-[90vw] lg:w-[90vw] xl:w-[86vw];
+
+  .box-padding {
+    @apply p-6 space-y-4 md:space-y-6 sm:p-8;
+  }
 }
 
 input:-webkit-autofill {
@@ -157,5 +171,9 @@ input:-webkit-autofill {
     -webkit-text-fill-color: var(--main-text-color) !important;
     
   }
+
+section {
+    @apply md:pt-5;
+}
 
   

@@ -1,3 +1,4 @@
+import { environment } from './../../../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { User } from '../models/user';
@@ -7,13 +8,17 @@ import { User } from '../models/user';
 })
 export class AuthService {
 
-  api = 'api/user'
+  api = environment.api + '/api/user'
 
   http = inject(HttpClient)
 
   constructor() { }
 
   createNewUser(body: User){
-    this.http.post<User>(`${this.api}/register`, body);
+    return this.http.post<User>(`${this.api}/register`, body);
+  }
+
+  loginUser(body: User){
+    return this.http.post<User>(`${this.api}/login`, body);
   }
 }

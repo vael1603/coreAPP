@@ -1,11 +1,13 @@
+import { AuthService } from './../../services/auth.service';
 import { SharedService } from './../../../../shared/shared.service';
 import { Component, inject, OnInit } from '@angular/core';
 import { SharedModule } from '../../../../shared/shared.module';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { TranslocoModule } from '@ngneat/transloco';
-import { RouterModule } from '@angular/router';
+import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
+import { Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-sign-in',
@@ -16,18 +18,33 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 export class SignInComponent implements OnInit {
   
   formBuilder = inject(FormBuilder);
-  signInform!: FormGroup;
+  authService = inject(AuthService);
+  sharedService = inject(SharedService);
+  router = inject(Router);
+
+  signInForm!: FormGroup;
   
   ngOnInit() {
-    this.signInform = this.formBuilder.group({
+    this.signInForm = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
 
-  onSubmit(event: Event) {
-    console.log('Form submitted', this.signInform.value, event);
-    throw new Error('Method not implemented.');
+  onSubmit() {
+        if(this.signInForm.invalid) return;
+    
+        const form = this.signInForm.value;
+        
+        const user: User = {
+          email: form.email ?? '',
+          password: form.password ?? ''
+        }
+        
+        this.authService.loginUser(user).subscribe(()=>{
+            this.sharedService.alert('success', 'authTr.loginSuccess');
+            this.router.navigate(['/home'])
+        });
   }
 
 }

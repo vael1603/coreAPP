@@ -6,7 +6,7 @@
     <div class="box-container">
         <div class="box-padding">
             <h1>{{ 'authTr.signInYourAccount' | transloco }}</h1>
-            <form class="space-y-4 md:space-y-6" [formGroup]="signInform" (ngSubmit)="onSubmit($event)">
+            <form class="space-y-4 md:space-y-6" [formGroup]="signInForm">
 
                 <div>
                     <label for="email">{{'authTr.yourEmail' | transloco }}</label>
@@ -29,7 +29,7 @@
                     <a class="forgot-password">{{'authTr.forgotPassword'| transloco }}</a>
                 </div>
 
-                <button type="submit" class="w-full">{{'authTr.signIn' | transloco }}</button>
+                <button (click)="onSubmit()" class="w-full">{{'authTr.signIn' | transloco }}</button>
                 <p class="text-sm">
                     {{'authTr.signUpText' | transloco }}
                     <a [routerLink]="['/auth/signup']" routerLinkActive="router-link-active">

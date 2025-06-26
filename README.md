@@ -1,5 +1,4 @@
 ### TODO ##
- -crear temas claros y oscuros con tailwind
 
 ### config ###
 Para clonar a partir de este proyecyo ejecutar:

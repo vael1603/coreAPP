@@ -18,7 +18,9 @@
     "errAtLeastSpecialChar": "Must contain at least one special character",
     "name": "Name",
     "lastname": "Lastname",
-    "passwordNotMatch": "The passwords doesn't match"
+    "passwordNotMatch": "The passwords doesn't match",
+    "loginSuccess": "Login successful",
+    "signUpSuccess": "Registration successful"
   }
 }
   
