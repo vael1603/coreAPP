@@ -145,7 +145,7 @@ div.box-container{
     background-color:  var(--main-bg-glass-color);
     border-color: var(--border-color);
     @apply bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60;
-    @apply rounded-lg shadow dark:border md:mt-0 xl:p-0;
+    @apply w-full rounded-lg shadow dark:border md:mt-0 xl:p-0;
     @apply sm:max-w-md;
 
     & div.box-padding{

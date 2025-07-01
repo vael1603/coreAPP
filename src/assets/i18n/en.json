@@ -21,6 +21,11 @@
     "passwordNotMatch": "The passwords doesn't match",
     "loginSuccess": "Login successful",
     "signUpSuccess": "Registration successful"
+  },
+  "homeTr": {
+    "welcome": "Welcome to CoreApp",
+    "description": "This is a sample application to demonstrate internationalization.",
+    "learnMore": "Learn more about this app"
   }
 }
   
