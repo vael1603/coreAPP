@@ -1,10 +1,14 @@
 <section class="signup-container">
     <h1 class="app-title">
-        CoreApp
+        <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
+        {{'appNameTr' | transloco }}
     </h1>
     <div class="box-container">
         <div class="box-padding">
-            <h1>{{ 'authTr.signUpYourAccount' | transloco }}</h1>
+            <div class="flex items-start">
+                <back-button></back-button>
+                <h1 class="my-auto ml-2">{{ 'authTr.signUpYourAccount' | transloco }}</h1>
+            </div>
             <form class="space-y-4 md:space-y-6" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
 
                 <div>

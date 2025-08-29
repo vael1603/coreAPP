@@ -7,10 +7,11 @@ import { TranslocoModule } from '@ngneat/transloco';
 import { AuthService } from '../../services/auth.service';
 import { passwordMatchValidator, passwordValidator } from '../../utils/passwordValidator';
 import { Router } from '@angular/router';
+import { BackButtonComponent } from "../../../../shared/components/back-button/back-button.component";
 
 @Component({
   selector: 'app-sign-up',
-  imports: [CommonModule, TranslocoModule, ReactiveFormsModule],
+  imports: [CommonModule, TranslocoModule, ReactiveFormsModule, BackButtonComponent],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'
 })
@@ -51,7 +52,7 @@ export class SignUpComponent {
     
     this.authService.createNewUser(user).subscribe(()=>{
         this.SharedService.alert('success', 'authTr.signUpSuccess');
-        this.router.navigate(['/signin'])
+        this.router.navigate(['/sign-in'])
     });
   }
 

@@ -26,7 +26,7 @@ export class SharedService {
   }
 
   private snackConfig = {
-    error:   { panelClass: "error-snack-bar",    duration: 500000 },
+    error:   { panelClass: "error-snack-bar",    duration: 4000 },
     warn:    { panelClass: "warning-snack-bar",  duration: 3000 },
     success: { panelClass: "success-snack-bar",  duration: 2000 },
     info:    { panelClass: "info-snack-bar",     duration: 4000 },

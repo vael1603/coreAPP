@@ -1,0 +1,12 @@
+.language-button{
+    // position: absolute;
+    // margin: 1rem;
+    // margin-top: 2rem;
+    // padding-right: 5px;
+
+    & mat-icon{
+        margin-top: 8px;
+    }
+
+    @apply top-0 right-0 focus:outline-none focus:ring-4 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2;
+}

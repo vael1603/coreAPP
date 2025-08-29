@@ -21,4 +21,9 @@ export class AuthService {
   loginUser(body: User){
     return this.http.post<User>(`${this.api}/login`, body);
   }
+
+  forgetPassword(email: string){
+    const body = {email}
+    return this.http.post<any>(`${this.api}/forgot-password`, body);
+  }
 }

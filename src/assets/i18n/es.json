@@ -20,7 +20,9 @@
     "lastname": "Apellido",
     "passwordNotMatch": "Las contraseñas no coinciden",
     "loginSuccess": "Ingreso exitoso",
-    "signUpSuccess": "Registration successful"
+    "signUpSuccess": "Registro exitoso",
+    "sendCode": "Enviar código",
+    "forgotPasswordText": "Te enviaremos un codigo para reestablecer tu contraseña"
   },
   "homeTr": {
     "welcome": "Bienvenido a CoreApp",

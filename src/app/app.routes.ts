@@ -3,11 +3,11 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'auth/signin',
+    redirectTo: 'auth/sign-in',
     pathMatch: 'full',
   },
   {
-    path: 'auth/signin',
+    path: 'auth/sign-in',
     pathMatch: 'full',
 
     loadComponent: () =>
@@ -22,6 +22,15 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/auth/components/sign-up/sign-up.component').then(
         (m) => m.SignUpComponent,
+      ),
+  },
+
+  {
+    path: 'auth/forgot-password',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('./features/auth/components/forgot-password/forgot-password.component').then(
+        (m) => m.ForgotPasswordComponent,
       ),
   },
   

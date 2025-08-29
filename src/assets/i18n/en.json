@@ -7,7 +7,7 @@
     "yourPassword": "Your password",
     "confirmPassword": "Confirm password",
     "rememberMe": "Remember me",
-    "forgotPassword": "Forgot password?",
+    "forgotPassword": "Forgot your password?",
     "signIn": "Sign in",
     "signUp": "Sign up",
     "signUpText": "Don't have an account?",
@@ -20,7 +20,9 @@
     "lastname": "Lastname",
     "passwordNotMatch": "The passwords doesn't match",
     "loginSuccess": "Login successful",
-    "signUpSuccess": "Registration successful"
+    "signUpSuccess": "Registration successful",
+    "sendCode": "Send Code",
+    "forgotPasswordText": "We will send a code to your email to reset your password"
   },
   "homeTr": {
     "welcome": "Welcome to CoreApp",
